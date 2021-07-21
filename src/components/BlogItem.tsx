@@ -25,7 +25,6 @@ const BlogItem: React.FC<BlogItemProps> = ({ props }) => {
       .delete(`https://simple-blog-api.crew.red/posts/${id}`)
       .then((response) => {
         alert('Post deleted')
-        dispatch({ type: BlogActionTypes.DELETE_POST_SUCCESS, payload: response.data })
       })
       .catch((error) => {
         console.log(error)

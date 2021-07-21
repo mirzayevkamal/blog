@@ -26,6 +26,14 @@ const MainContainer = styled.div`
         grid-template-columns: 1fr 1fr 1fr;
         gap: 15px;
         margin-top: 50px;
+
+        @media (max-width:768px){
+        grid-template-columns: 1fr;
+        }
+
+        @media screen and (min-width: 768px) and (max-width:1350px){
+            grid-template-columns: 1fr 1fr;
+            }
 `
 
 const BlogContainer = styled.div`
