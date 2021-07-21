@@ -9,12 +9,14 @@ const coolImages = require('cool-images')
 
 const BlogPreview = ({ post }) => {
   const router = useRouter()
-  const postId = router.query.id
+  let postId = null
   const dispatch = useDispatch()
   const [loading, setLoading] = useState(true)
   const [image, setImage] = useState('')
 
   useEffect(() => {
+    postId = window.location.pathname.split('/')[2]
+    console.log(postId)
     setImage(coolImages.one(300, 600))
   }, [])
 
