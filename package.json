@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "lint": "eslint --ext .ts,.tsx --fix",
-    "vercel-build": "npm run prepare && next build"
+    "build": "next build",
+    "start": "next start"
   },
   "husky": {
     "hooks": {
@@ -47,6 +48,7 @@
     "@typescript-eslint/parser": "^4.28.3",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^7.31.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",

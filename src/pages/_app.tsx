@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app'
+import App, { AppContext, AppProps } from 'next/app'
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import theme from '../styles/theme'
@@ -15,11 +15,6 @@ const MyApp = (props) => {
       <GlobalStyle />
     </ThemeProvider>
   )
-}
-
-MyApp.getInitialProps = async ({ Component, ctx }) => {
-  const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
-  return { pageProps }
 }
 
 export default wrapper.withRedux(MyApp)
