@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "lint": "eslint --ext .ts,.tsx --fix"
+    "lint": "eslint --ext .ts,.tsx --fix",
+    "vercel-build": "npm run prepare && next build"
   },
   "husky": {
     "hooks": {
